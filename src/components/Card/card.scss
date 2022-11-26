@@ -1,0 +1,32 @@
+.div_products{
+    background-color: rgba(11, 46, 75, 0.836);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 40px;
+    padding: 10px;
+    border-radius: 2px;
+    color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
+
+    img{
+        width: 150px;
+        height: 160px;
+        margin: 10px;
+        border-radius: 2px;
+        box-shadow: 2px 0px 4px 2px rgba(0, 0, 0, 0.6);
+    }
+    p{
+        margin: 15px;
+    }
+    .div_nombre{
+        display: flex;
+        flex-wrap: nowrap;
+        
+        h3{
+            margin-right: 10px;
+        }
+    }
+}
