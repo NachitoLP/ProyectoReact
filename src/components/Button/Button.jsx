@@ -10,7 +10,7 @@ export default function Button() {
 
     return (
     <div>
-        <button className={isFavorite? "boton_no_favorito":"boton_favorito"} onClick={favorito}>❤</button>
+        <button className={isFavorite? "boton_favorito":"boton_no_favorito"} onClick={favorito}>❤</button>
     </div>
-  )
+    )
 }
