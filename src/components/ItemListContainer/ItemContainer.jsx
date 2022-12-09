@@ -1,16 +1,17 @@
 import "./itemList.scss";
 import React , {useState, useEffect} from 'react';
 import Item from "./Item";
-import itemDestacado, {itemOfertas, itemRemera, itemPantalon, itemOtro} from "../../services/mockServices";
+import {Link} from "react-router-dom"
+import itemDestacado, {itemOfertas, itemRemera, itemPantalon, itemOtro, ropaVarios, perfumeVarios} from "../../services/mockServices";
 
 export default function ItemListDestacados() {
   const [destacados, setDestacados] = useState([]);
 
   useEffect( () => {
     itemDestacado()
-    .then((arrayDestacados) => setDestacados(arrayDestacados))
-    }, []
-  )
+    .then((arrayDestacado) => { setDestacados(arrayDestacado)
+    })
+}, [])
 
   return (
     <div className="div_cards">
@@ -19,6 +20,7 @@ export default function ItemListDestacados() {
           img = {item.img}
           nombre = {item.nombre}
           precio = {item.precio}
+          id = {item.id}
         />
       ))}
     </div>
@@ -30,9 +32,9 @@ export function ItemListOfertas() {
 
   useEffect( () => {
     itemOfertas()
-    .then((arrayOfertas) => setOfertas(arrayOfertas))
-    }, []
-  )
+    .then((arrayOfertas) => { setOfertas(arrayOfertas)
+    })
+}, [])
 
   return (
     <div className="div_cards">
@@ -42,9 +44,72 @@ export function ItemListOfertas() {
           nombre = {item.nombre}
           precioAnt = {item.precioAnt}
           precio = {item.precio}
+          id = {item.id}
           porcentajeOff = {item.porcentajeOff}
         />
       ))}
+    </div>
+  )
+}
+
+export function ItemRopaVarios() {
+  const [varios, setVarios] = useState([]);
+
+  useEffect( () => {
+    ropaVarios()
+    .then((arrayVarios) => { setVarios(arrayVarios)
+    })
+}, [])
+
+  return (
+    <div>
+      <div className="titulo_redirigir">
+        <h3>Ropa</h3>
+        <Link to="/categoria/ropa">Ver más</Link>
+      </div>
+      <div className="div_cards">
+        {varios.map((item) => (
+          <Item
+            img = {item.img}
+            nombre = {item.nombre}
+            precioAnt = {item.precioAnt}
+            precio = {item.precio}
+            id = {item.id}
+            porcentajeOff = {item.porcentajeOff}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export function ItemPerfumeVarios() {
+  const [variosP, setVariosP] = useState([]);
+
+  useEffect( () => {
+    perfumeVarios()
+    .then((arrayVariosP) => { setVariosP(arrayVariosP)
+    })
+}, [])
+
+  return (
+    <div>
+      <div className="titulo_redirigir">
+        <h3>Perfumes</h3>
+        <Link to="/categoria/perfumeria">Ver más</Link>
+      </div>
+      <div className="div_cards">
+        {variosP.map((item) => (
+          <Item
+            img = {item.img}
+            nombre = {item.nombre}
+            precioAnt = {item.precioAnt}
+            precio = {item.precio}
+            id = {item.id}
+            porcentajeOff = {item.porcentajeOff}
+          />
+        ))}
+      </div>
     </div>
   )
 }
@@ -54,9 +119,9 @@ export function ItemListRemera() {
 
   useEffect( () => {
     itemRemera()
-    .then((arrayRemera) => setRemera(arrayRemera))
-    }, []
-  )
+    .then((arrayRemera) => { setRemera(arrayRemera)
+    })
+}, [])
 
   return (
     <div>
@@ -67,6 +132,7 @@ export function ItemListRemera() {
             img = {item.img}
             nombre = {item.nombre}
             precio = {item.precio}
+            id = {item.id}
           />
         ))}
       </div>
@@ -79,9 +145,9 @@ export function ItemListOtro() {
 
   useEffect( () => {
     itemOtro()
-    .then((arrayOtro) => setOtro(arrayOtro))
-    }, []
-  )
+    .then((arrayOtro) => { setOtro(arrayOtro)
+    })
+}, [])
 
   return (
     <div>
@@ -92,6 +158,7 @@ export function ItemListOtro() {
             img = {item.img}
             nombre = {item.nombre}
             precio = {item.precio}
+            id = {item.id}
           />
         ))}
       </div>
@@ -104,9 +171,9 @@ export function ItemListPantalon() {
 
   useEffect( () => {
     itemPantalon()
-    .then((arrayPantalon) => setPantalon(arrayPantalon))
-    }, []
-  )
+    .then((arrayPantalon) => { setPantalon(arrayPantalon)
+    })
+}, [])
 
   return (
     <div>
@@ -117,6 +184,7 @@ export function ItemListPantalon() {
             img = {item.img}
             nombre = {item.nombre}
             precio = {item.precio}
+            id = {item.id}
           />
         ))}
       </div>

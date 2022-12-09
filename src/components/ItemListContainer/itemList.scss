@@ -1,3 +1,30 @@
+.div_products_link{
+    text-decoration: none;
+}
+
+.titulo_redirigir{
+    width: 100%;
+    text-align: center;
+    h3{
+        display: inline-block;
+        margin: 0px 10px;
+        padding: 0;
+    }
+    a{
+        display: inline-block;
+        font-size: 12px;
+        color: rgb(70, 184, 230);
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    
+}
+
 .div_cards{
     display: flex;
     justify-content: center;
