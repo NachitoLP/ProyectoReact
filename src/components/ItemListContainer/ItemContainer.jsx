@@ -2,7 +2,7 @@ import "./itemList.scss";
 import React , {useState, useEffect} from 'react';
 import Item from "./Item";
 import {Link} from "react-router-dom"
-import itemDestacado, {itemOfertas, itemRemera, itemPantalon, itemOtro, ropaVarios, perfumeVarios} from "../../services/mockServices";
+import itemDestacado, {itemOfertas, itemRemera, itemPantalon, itemOtro, ropaVarios, perfumeVarios, itemPerfumes} from "../../services/mockServices";
 
 export default function ItemListDestacados() {
   const [destacados, setDestacados] = useState([]);
@@ -192,5 +192,29 @@ export function ItemListPantalon() {
   )
 }
 
+export function ItemListPerfumes() {
+  const [perfumes, setPerfumes] = useState([]);
+
+  useEffect( () => {
+    itemPerfumes()
+    .then((arrayPerfumes) => { setPerfumes(arrayPerfumes)
+    })
+  }, [])
+  
+  return (
+    <div className="div_cards_perfumes">
+      <div className="div_cards">
+        {perfumes.map((item) => (
+          <Item
+            img = {item.img}
+            nombre = {item.nombre}
+            precio = {item.precio}
+            id = {item.id}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 

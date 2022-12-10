@@ -12,6 +12,7 @@ export default function ItemListDetail() {
         getItemDetail(id)
         .then((arrayDetail) => { setDetail(arrayDetail)
         })
+        .catch((error) => alert("No se encontró el item buscado."))
     }, [])
 
     return (

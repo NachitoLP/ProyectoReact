@@ -1,4 +1,4 @@
-import elementosDestacados, {ofertasDestacadas, remeras, pantalones, otros, variosRopa, variosPerfume} from "../data/elementosSeccion";
+import elementosDestacados, {ofertasDestacadas, remeras, pantalones, otros, variosRopa, variosPerfume, perfumes} from "../data/elementosSeccion";
 import detalle from "../data/elementosGeneral";
 
 export default function itemDestacado() {
@@ -69,4 +69,12 @@ export function getItemDetail(id) {
             }
         }, 0)
     })
+}
+
+export function itemPerfumes() {
+    return new Promise ((resolve => {
+        setTimeout(() =>{
+            resolve(perfumes)
+        }, 0)
+    }))
 }

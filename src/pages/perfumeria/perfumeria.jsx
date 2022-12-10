@@ -1,10 +1,14 @@
+import React from 'react';
 import "./perfumeria.scss";
-import React from 'react'
+import {ItemListPerfumes} from '../../components/ItemListContainer/ItemContainer';
 
-export default function Perfumeria() {
-  return (
+export default function Perfumes() {
+    return (
     <div>
-      <h1>Hola mundo</h1>
+        <h3>CÁTALOGO DE PERFUMES</h3>
+        <div className='contenedor_categorias_perfumes'>
+            <ItemListPerfumes/>
+        </div>
     </div>
-  )
+    )
 }

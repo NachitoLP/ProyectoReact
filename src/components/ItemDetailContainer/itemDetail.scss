@@ -1,4 +1,55 @@
 .div_detail_container{
     display: flex;
-    
+    width: 500px;
+    height: 600px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
+
+    .div_detail{
+        img{
+            margin: auto;
+            display: block;
+            width: 300px;
+            max-height: 270px;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+        }
+        .detail_name{
+            color: black;
+            font-size: 35px;
+            margin: 20px 0px;
+        }
+        .detail_price{
+            font-size: 40px;
+            margin: 20px;
+            text-align: center;
+            display: block;
+        }
+        .detail_text{
+            margin: auto;
+            text-align: center;
+        }
+        .boton_agregar{
+            margin: auto;
+            margin-top: 30px;
+            display: block;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(16, 45, 75);
+            border: none;
+            border-radius: 7px;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
+            color: white;
+            transition: 0.3s;
+
+            &:hover{
+                transform: scale(1.1,1.1);
+                transition: 0.3s;
+            }
+        }
+    }
 }
