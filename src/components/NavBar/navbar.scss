@@ -28,6 +28,7 @@
         .logo_carrito{
             display: inline-block;
             position: absolute;
+            text-decoration: none;
             line-height: 100px;
             margin: 0px 20px;
             right: 0;
@@ -42,6 +43,10 @@
                 color: white;
                 font-weight: 600;
                 font-size: 30px;
+            }
+            .contador{
+                font-size: 20px;
+                color: rgb(14, 101, 194);
             }
         }
     }
