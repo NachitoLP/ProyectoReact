@@ -1,9 +1,10 @@
-const detalle = [
+const productos = [
     {
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVMMXdJOG13rDp9cEzdRkvz9iP0G_6SBMJ_Q&usqp=CAU", 
         nombre: "Camisa",
         detail: "Una camisa elegante para ir al trabajo o a una reunión importante. Muy lujosa y a un precio imperdible.",
         precio: "$5500",
+        categoria: "ropa",
         id: "1",
     },
     {
@@ -11,6 +12,7 @@ const detalle = [
         nombre: "Remera", 
         detail: "Una remera con los colores de la bandera Argentina, y una frase que hace referencia al aliento por la misma: Vamos Argentina!.",
         precio: "$3500",
+        categoria: "ropa",
         id: "2",
     },
     {
@@ -18,6 +20,7 @@ const detalle = [
         nombre: "Golden S", 
         detail: "Un perfume con un aroma muy agradable para el olfato, y con un precio llamativo para la calidad del producto.",
         precio: "$7650",
+        categoria: "perfumeria",
         id: "3",
     },
     {
@@ -25,6 +28,7 @@ const detalle = [
         nombre: "Zapatillas", 
         detail: "Unas zapatillas cómodas y sin muchos detalles, con disponibilidad de distintos colores para elegir, y a un muy buen precio.",
         precio: "$8000",
+        categoria: "ropa",
         id: "4",
     },
     {
@@ -32,6 +36,7 @@ const detalle = [
         nombre: "Pantalon", 
         detail: "Un pantalón ajustado pero cómodo, con un color verdoso y distintos talles seleccionables.",
         precio: "$9000",
+        categoria: "ropa",
         id: "5",
     },
     {
@@ -39,6 +44,7 @@ const detalle = [
         nombre: "Gorro", 
         detail: "Piluso marca Puma, de color negro por el exterior y rojo por el interior, perfecto para los días con mucho sol.",
         precio: "$3300",
+        categoria: "ropa",
         id: "6",
     },
     {
@@ -47,6 +53,7 @@ const detalle = [
         precioAnt: "$8900", 
         detail: "Un perfume con una oferta imperdible en el precio, muy elegante, a la altura de un evento importante o una cita.",
         precio: "$7630",
+        categoria: "perfumeria",
         porcentajeOff: "10% OFF",
         
         id: "7",
@@ -57,6 +64,7 @@ const detalle = [
         precioAnt: "$4300", 
         detail: "Unas bermudas de Jean, con tela finita ideal para los días de calor. Pueden venir en distintos colores.",
         precio: "$3500",
+        categoria: "ropa",
         porcentajeOff: "7% OFF",
         id: "8",
     },
@@ -66,6 +74,7 @@ const detalle = [
         precioAnt: "$15250", 
         detail: "La camiseta de la selección argentina de futbol, con el modelo utilizado en el mundial 2014, y con una oferta imperdible.",
         precio: "$12700",
+        categoria: "ropa",
         porcentajeOff: "20% OFF",
         id: "9",
     },
@@ -75,6 +84,7 @@ const detalle = [
         precioAnt: "$9300", 
         detail: "Lentes de aviador marca RayBan, muy lujosos y también en una oferta especial.",
         precio: "$8159,99",
+        categoria: "ropa",
         porcentajeOff: "7% OFF",
         id: "10",
     },
@@ -84,6 +94,7 @@ const detalle = [
         precioAnt: "$9300", 
         detail: "Otro lujoso y rico perfume en oferta especial por tiempo limitado. Sorprendé a tu pareja con este gran y atractivo aroma.",
         precio: "$7520",
+        categoria: "perfumeria",
         porcentajeOff: "10% OFF",
         id: "11",
     },
@@ -93,6 +104,7 @@ const detalle = [
         precioAnt: "$4699", 
         detail: "Un gorro de lana de gran calidad, ideal para los días de frio y cómodo para el cliente.",
         precio: "$3399,99",
+        categoria: "ropa",
         porcentajeOff: "7% OFF",
         id: "12",
     },
@@ -101,6 +113,7 @@ const detalle = [
         nombre: "Diseño 1",
         detail: "Una remera blanca y negra con un diseño en la parte delantera y lisa por detrás.",
         precio: "$3399,99",
+        categoria: "ropa",
         id: "13",
     },
     {
@@ -108,6 +121,7 @@ const detalle = [
         nombre: "Diseño 2", 
         detail: "Una remera con un diseño especial del club River Plate, de tela suave e ideal para días de calor.",
         precio: "$4399,99",
+        categoria: "ropa",
         id: "14",
     },
     {
@@ -115,6 +129,7 @@ const detalle = [
         nombre: "Diseño 3", 
         detail: "Una remera blanca y negra con un diseño en la parte delantera y lisa por detrás.",
         precio: "$3399,99",
+        categoria: "ropa",
         id: "15",
     },
     {
@@ -122,6 +137,7 @@ const detalle = [
         nombre: "Diseño 4", 
         detail: "Una remera blanca y gris con un diseño llamativo de playa.",
         precio: "$3399,99",
+        categoria: "ropa",
         id: "16",
     },
     {
@@ -129,6 +145,7 @@ const detalle = [
         nombre: "Diseño 5", 
         detail: "Una remera deportiva y ajustada, con un diseño especial gaming. Muy cómoda y llamativa.",
         precio: "$3399,99",
+        categoria: "ropa",
         id: "17",
     },
     {
@@ -136,6 +153,7 @@ const detalle = [
         nombre: "Diseño 6", 
         detail: "Una remera con un diseño especial dedicado a los fanáticos del anime y series animadas.",
         precio: "$3399,99",
+        categoria: "ropa",
         id: "18",
     },
     {
@@ -143,6 +161,7 @@ const detalle = [
         nombre: "Bermudas",
         detail: "Unas bermudas de Jean, con tela finita ideal para los días de calor. Pueden venir en distintos colores.",
         precio: "$3500",
+        categoria: "ropa",
         id: "19",
     },
     {
@@ -150,6 +169,7 @@ const detalle = [
         nombre: "Street", 
         detail: "Un pantalón con un estilo callejero, pero a la vez elegante, y cómodo.",
         precio: "$6399,99",
+        categoria: "ropa",
         id: "20",
     },
     {
@@ -157,6 +177,7 @@ const detalle = [
         nombre: "Street 2.0", 
         detail: "Otro pantalón con un estilo callejero, pero a la vez elegante, y cómodo. Parecido al Street anterior, pero con otras tonalidades.",
         precio: "$6399,99",
+        categoria: "ropa",
         id: "21",
     },
     {
@@ -164,6 +185,7 @@ const detalle = [
         nombre: "Holgados", 
         detail: "Un pantalón con un estilo holgado, o mejor conocido como Babuchas, muy cómodos.",
         precio: "$4500",
+        categoria: "ropa",
         id: "22",
     },
     {
@@ -171,6 +193,7 @@ const detalle = [
         nombre: "Jeans A", 
         detail: "Unos jeans elegantes, ideales para reuniones formales o salidas especiales. Tela gruesa con muy buen detallado.",
         precio: "$6000",
+        categoria: "ropa",
         id: "23",
     },
     {
@@ -178,6 +201,7 @@ const detalle = [
         nombre: "Jeans B", 
         detail: "Unos jeans elegantes, ideales para reuniones formales o salidas especiales. Tela gruesa con muy buen detallado.",
         precio: "$5999,99",
+        categoria: "ropa",
         id: "24",
     },
     {
@@ -185,6 +209,7 @@ const detalle = [
         nombre: "Soquetes",
         detail: "3 pares de medias cortas de tela fina y cómodos. No se aprecian con zapatillas puestas.",
         precio: "$1500",
+        categoria: "ropa",
         id: "25",
     },
     {
@@ -192,6 +217,7 @@ const detalle = [
         nombre: "Gorras Sport", 
         detail: "Gorras deportivas e ideales para días soleados. Color a elección del cliente.",
         precio: "$3500 C/U",
+        categoria: "ropa",
         id: "26",
     },
     {
@@ -199,6 +225,7 @@ const detalle = [
         nombre: "Lentes", 
         detail: "Lentes de aviador marca RayBan, muy lujosos y también en una oferta especial.",
         precio: "$8159,99",
+        categoria: "ropa",
         id: "27",
     },
     {
@@ -206,6 +233,7 @@ const detalle = [
         nombre: "Gorro", 
         detail: "Un gorro de lana de gran calidad, ideal para los días de frio y cómodo para el cliente.",
         precio: "$3399,99",
+        categoria: "ropa",
         id: "28",
     },
     {
@@ -213,6 +241,7 @@ const detalle = [
         nombre: "Zapatillas W", 
         detail: "Unas zapatillas blancas semi-deportivas. Atractivas y cómodas a la vez.",
         precio: "$9899,99",
+        categoria: "ropa",
         id: "29",
     },
     {
@@ -220,6 +249,7 @@ const detalle = [
         nombre: "Zapatillas S", 
         detail: "Otras zapatillas, pero con más tonalidades y otro aspecto físico, que mantiene la misma comodidad.",
         precio: "$8600",
+        categoria: "ropa",
         id: "30",
     },
     {
@@ -227,6 +257,7 @@ const detalle = [
         nombre: "Gorra Tela",
         detail: "Una gorra de tela fina, cómoda y práctica.",
         precio: "$3400",
+        categoria: "ropa",
         id: "31",
     },
     {
@@ -234,6 +265,7 @@ const detalle = [
         nombre: "Christian Dior", 
         detail: "Perfume marca Christian Dior, muy lujoso y en un precio accesible para el usuario.",
         precio: "$11800",
+        categoria: "perfumeria",
         id: "32",
     },
     {
@@ -241,6 +273,7 @@ const detalle = [
         nombre: "Dolce & G",  
         detail: "Perfume marca Dolce & Gabbana, también lujoso como el Christan Dior, pero a un precio más accesible.",
         precio: "$8599,99",
+        categoria: "perfumeria",
         id: "33",
     },
     {
@@ -248,6 +281,7 @@ const detalle = [
         nombre: "ONA",
         detail: "Perfume marca ONA. Su aroma llama la atención al instante, y capta a las personas que te rodean.",
         precio: "$9899,99",
+        categoria: "perfumeria",
         id: "34",
     },
     {
@@ -255,6 +289,7 @@ const detalle = [
         nombre: "Firulete", 
         detail: "Perfume marca Firulete. Una opción más barata, pero de buena calidad.",
         precio: "$6800",
+        categoria: "perfumeria",
         id: "35",
     },
     {
@@ -262,6 +297,7 @@ const detalle = [
         nombre: "The Original", 
         detail: "Perfume marca Firulete. Una opción más barata, pero de buena calidad.",
         precio: "$7599,99",
+        categoria: "perfumeria",
         id: "36",
     },
     {
@@ -269,6 +305,7 @@ const detalle = [
         nombre: "Eternity", 
         detail: "Perfume marca Calvin Klein. Excelente relación calidad-precio y una buena fragancia para una primera cita.",
         precio: "$9899,99",
+        categoria: "perfumeria",
         id: "37",
     },
     {
@@ -276,6 +313,7 @@ const detalle = [
         nombre: "ANA", 
         detail: "Perfume marca ANA de Analia Maiorana. Una opción excelente y de buena calidad.",
         precio: "$10500",
+        categoria: "perfumeria",
         id: "38",
     },
     {
@@ -283,6 +321,7 @@ const detalle = [
         nombre: "Irresistible", 
         detail: "Perfume marca Givenchy. Un perfume importado, y de muy rica fragancia.",
         precio: "$14099,99",
+        categoria: "perfumeria",
         id: "39",
     },
     {
@@ -290,6 +329,7 @@ const detalle = [
         nombre: "Bright Crystal", 
         detail: "Perfume marca Versace. Otro perfume importado, pero de precio más razonable.",
         precio: "$11000",
+        categoria: "perfumeria",
         id: "40",
     },
     {
@@ -297,6 +337,7 @@ const detalle = [
         nombre: "Pour Homme", 
         detail: "Perfume marca Dolce & Gabbana. Una opción más barata, pero de buena calidad.",
         precio: "$7430",
+        categoria: "perfumeria",
         id: "41",
     },
     {
@@ -304,6 +345,7 @@ const detalle = [
         nombre: "Dieciseis", 
         detail: "Perfume marca CHER. Fragancia única en el mercado.",
         precio: "$5799,99",
+        categoria: "perfumeria",
         id: "42",
     },
     {
@@ -311,6 +353,7 @@ const detalle = [
         nombre: "Aqua Di Gio", 
         detail: "Perfume marca Giorgio Armani. Una excelente opción para hombres.",
         precio: "$8320",
+        categoria: "perfumeria",
         id: "43",
     },
     {
@@ -318,6 +361,7 @@ const detalle = [
         nombre: "CH", 
         detail: "Perfume marca Carolina Herrera, una muy aclamada y valorada en el mercado.",
         precio: "$11199,99",
+        categoria: "perfumeria",
         id: "44",
     },
     {
@@ -325,6 +369,7 @@ const detalle = [
         nombre: "One Million", 
         detail: "Perfume marca Paco Rabanne. Una opción más barata, pero de buena calidad.",
         precio: "$7599,99",
+        categoria: "perfumeria",
         id: "45",
     },
     {
@@ -332,8 +377,9 @@ const detalle = [
         nombre: "Homem", 
         detail: "Perfume marca Natura. Una opción más barata, pero de buena calidad.",
         precio: "$6599,99",
+        categoria: "perfumeria",
         id: "46",
     },
 ]
 
-export default detalle;
+export default productos;
