@@ -1,3 +1,4 @@
+import ItemCount from "../ItemCount/ItemCount";
 import "./itemDetail.scss";
 
 export default function ItemDetail(props) {
@@ -9,6 +10,7 @@ export default function ItemDetail(props) {
                 <img alt={nombre} src={img} />
                 <p className="detail_price">{precio}</p>
                 <p className="detail_text">{detail}</p>
+                <ItemCount/>
                 <button className="boton_agregar">Agregar al carrito</button>
             </div>
         </div>
