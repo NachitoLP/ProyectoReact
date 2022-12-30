@@ -89,6 +89,23 @@
                 margin: 0px 5px 5px;
                 color: rgb(11, 46, 75);
             }
+            .boton_no_favorito{
+                padding: 2px 5px;
+                text-align: center;
+                border: none;
+                border-radius: 50px;
+                font-size: 16px;
+                background-color: grey;
+                color: white;
+                transition: 0.5s;
+            }
+            
+            .boton_favorito{
+                @extend .boton_no_favorito;
+                background-color: transparent;
+                color: rgb(11, 46, 75);
+                transform: scale(1.5,1.5);
+            }
         }
     }
 }

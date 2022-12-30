@@ -1,16 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import "./button.scss"
+import React from 'react';
 
-export default function Button() {
-    const [isFavorite, setFavorite] = useState(false);
-
-    function favorito() {
-        isFavorite === true ? setFavorite(false) : setFavorite(true);
-    }
-
+export default function Button(props) {
     return (
     <div>
-        <button className={isFavorite? "boton_favorito":"boton_no_favorito"} onClick={favorito}>❤</button>
+        <button className={props.className} onClick={props.onClick}>{props.text}</button>
     </div>
     )
 }

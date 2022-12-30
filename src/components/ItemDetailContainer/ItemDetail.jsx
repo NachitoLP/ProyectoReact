@@ -1,8 +1,15 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./itemDetail.scss";
+import useState from "react";
 
 export default function ItemDetail(props) {
     const { img, nombre, precio, detail } = props;
+    const [ inCart,setInCart ] = useState(false)
+
+    function handleAddToCart (count) {
+        console.log("Compraste items:", count)
+    }
+
     return (
         <div className="div_detail_container">
             <div className="div_detail">
@@ -10,8 +17,7 @@ export default function ItemDetail(props) {
                 <img alt={nombre} src={img} />
                 <p className="detail_price">{precio}</p>
                 <p className="detail_text">{detail}</p>
-                <ItemCount/>
-                <button className="boton_agregar">Agregar al carrito</button>
+                <ItemCount onAddToCart = { handleAddToCart }/>
             </div>
         </div>
     );

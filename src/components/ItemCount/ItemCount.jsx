@@ -1,8 +1,9 @@
 import React from 'react';
 import "./itemcount.scss";
 import { useState } from 'react';
+import Button from "../Button/Button"
 
-export default function ItemCount({ stock }) {
+export default function ItemCount({ stock, onAddToCart }) {
     const [count, setCount] = useState(1)
 
     function handleAdd() {
@@ -14,10 +15,13 @@ export default function ItemCount({ stock }) {
     }
 
     return (
-        <div className='itemCount_container'>
-            <button onClick={handleSubstract} className="restar">-</button>
-            <span>{count}</span>
-            <button onClick={handleAdd} className="sumar">+</button>
+        <div>
+            <div className='itemCount_container'>
+                <Button onClick={handleSubstract} className="restar" text="-"/>
+                <span>{count}</span>
+                <Button onClick={handleAdd} className="sumar" text="+"/>
+            </div>
+            <Button onClick={()=> onAddToCart(count)} className="boton_agregar_carrito" text="Agregar al carrito"/>
         </div>
     )
 }
