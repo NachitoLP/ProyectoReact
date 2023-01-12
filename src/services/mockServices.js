@@ -4,19 +4,21 @@ export default function itemsGeneral() {
     return new Promise((resolve => {
         setTimeout(() =>{
             resolve(productos)
-        }, 0)
+        }, 1000)
     }))
 }
 
 export function getItemCategory(catID) {
     return new Promise( (resolve,reject) => {
-        let itemsFound = productos.filter ( item => {
-            return (item.categoria === catID)
-        })
-        if (itemsFound.length > 0){
-            resolve(itemsFound)
-        }
-        else reject (alert("No existe esa categoria de productos"))
+        setTimeout(() => {
+            let itemsFound = productos.filter ( item => {
+                return (item.categoria === catID)
+            })
+            if (itemsFound.length > 0){
+                resolve(itemsFound)
+            }
+            else reject (alert("No existe esa categoria de productos"))
+        }, 1000)
     })
 }
 
@@ -30,6 +32,6 @@ export function getItemDetail(id) {
             else{
                 reject("Item no encontrado")
             }
-        }, 0)
+        }, 1000)
     })
 }

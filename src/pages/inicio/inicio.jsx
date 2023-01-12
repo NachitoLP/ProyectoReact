@@ -8,10 +8,12 @@ export default function Inicio() {
 
     return (
     <div>
-        <div className='titulo_categoria'>
-            <h3>PRODUCTOS</h3>
+        <div>
+            <div className='titulo_categoria'>
+                <h3>PRODUCTOS</h3>
+            </div>
+            <ItemListGeneral/>
         </div>
-        <ItemListGeneral/>
     </div>
     )
 }
