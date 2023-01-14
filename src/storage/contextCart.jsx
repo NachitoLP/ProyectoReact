@@ -23,7 +23,6 @@ export default function ContextCartProvider(props) {
             const newItem = item;
             newItem.count = count;
             newCart.push(newItem);
-            console.log(newItem);
             setCart(newCart);
         }
     }

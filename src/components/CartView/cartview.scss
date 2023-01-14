@@ -1,0 +1,55 @@
+.div_carrito_vacio{
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    h2{
+        color: white;
+        margin-bottom: 10px;
+    }
+    .link_volver{
+        color: white;
+        &:hover{
+            color: violet;
+        }
+    }
+}
+
+
+.titulo_carrito{
+    color: white;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.div_products_2{
+    &:hover{
+        transform: none !important;
+    }
+    .cantidad_agregado{
+        position:absolute;
+        margin: 0px 0px 245px 145px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 100px;
+        background-color: rgb(9, 38, 61);
+        color: white;
+    }
+    .eliminar_producto{
+        margin: 10px auto 0px;
+        width: 180px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 30px;
+        text-align: center;
+        border: none;
+        background-color: rgb(9, 38, 61);
+        color: white;
+        transition: 0.3s;
+        &:hover{
+            background-color: rgb(18, 70, 112);
+            transition: 0.3s;
+        }
+    }
+}

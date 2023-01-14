@@ -4,7 +4,7 @@ export default function itemsGeneral() {
     return new Promise((resolve => {
         setTimeout(() =>{
             resolve(productos)
-        }, 1000)
+        }, 800)
     }))
 }
 
@@ -18,7 +18,7 @@ export function getItemCategory(catID) {
                 resolve(itemsFound)
             }
             else reject (alert("No existe esa categoria de productos"))
-        }, 1000)
+        }, 800)
     })
 }
 
@@ -32,6 +32,6 @@ export function getItemDetail(id) {
             else{
                 reject("Item no encontrado")
             }
-        }, 1000)
+        }, 800)
     })
 }

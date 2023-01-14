@@ -38,8 +38,7 @@ export default function ItemListDetail() {
                     <img alt={product.nombre} src={product.img} />
                     <p className="detail_price">{product.precio}</p>
                     <p className="detail_text">{product.detail}</p>
-                    <ItemCount onAddToCart = { handleAddToCart }/>
-                    <Link to="/carrito" className="link_carrito">Ir al carrito</Link>
+                    {countInCart === 0 ? <ItemCount onAddToCart = { handleAddToCart }/> : <Link to="/carrito" className="link_carrito">Ir al carrito</Link>}
                 </div>
             </div>
             }
