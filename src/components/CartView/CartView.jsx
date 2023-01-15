@@ -1,25 +1,11 @@
 import React, { useContext } from 'react';
-import Item from '../ItemListContainer/Item';
 import "./cartview.scss";
 import { contextoApp } from '../../storage/contextCart';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
 export default function CartView() {
-    const { cart } = useContext(contextoApp);
-    const [ newCart, setNewCart ] = useState([]);
-
-    function removeItem(product) {
-        const itemFiltrado = cart.find((item) => item === product)
-        const index = cart.indexOf(itemFiltrado);
-        if (index>-1) {
-            cart.splice(index,1)
-            setNewCart(cart);
-        }
-    }
-    
-
+    const { cart, removeItem } = useContext(contextoApp);
     if (cart.length === 0) {
         return (
             <div className='div_carrito_vacio'>
@@ -31,7 +17,7 @@ export default function CartView() {
     else {
         return (
             <div>
-                <h2 className='titulo_carrito'>Bienvenido al carrito</h2>
+                <h2 className='titulo_carrito'>Tu carrito</h2>
                 <div className="div_cards">
                     {cart.map((product) => (
                     <div className="div_products div_products_2">
@@ -41,11 +27,19 @@ export default function CartView() {
                             <h3>{product.nombre}</h3>
                         </div>
                         <div className="div_precio">
-                            <p>{product.precio} {product.descuento? <small className="numero_descuento">{product.descuento}</small> : <></>}</p>
+                            <p>${product.precio} {product.descuento? <small className="numero_descuento">{product.descuento}</small> : <></>}</p>
                         </div>
-                        <Button onClick={() => removeItem(product)} className="eliminar_producto" text="X"/>
+                        <Button onClick={() => 
+                            {
+                                removeItem(product)
+                            }
+                            } className="eliminar_producto" text="X"/>
                     </div>
                 ))}
+                </div>
+                <div className='div_precio_total'>
+                    <h3 className='precio_total'>Precio total:</h3>
+                    <Button onClick={() => {alert("Felicitaciones, has realizado una compra.")}} className="boton_compra" text="Finalizar Compra"/>
                 </div>
             </div>
         )

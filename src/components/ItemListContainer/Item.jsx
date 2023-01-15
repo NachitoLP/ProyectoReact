@@ -22,7 +22,7 @@ export default function Item(props) {
         <Button onClick = {favorito} text = "❤" className = {isFavorite? "boton_favorito":"boton_no_favorito"}/>
       </div>
       <div className="div_precio">
-        <p>{precio} {props.descuento? <small className="numero_descuento">{descuento}</small> : <></>}</p>
+        <p>${precio} {props.descuento? <small className="numero_descuento">{descuento}</small> : <></>}</p>
       </div>
     </div>
   );

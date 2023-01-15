@@ -2,7 +2,7 @@ import "./itemList.scss";
 import React , {useState, useEffect} from 'react';
 import Item from "./Item";
 import { useParams } from "react-router-dom";
-import itemsGeneral, { getItemCategory } from "../../services/mockServices";
+import { itemsGeneral, getItemCategory } from "../../services/firebase";
 import Loader from "../Loader/Loader";
 
 export default function ItemListGeneral() {

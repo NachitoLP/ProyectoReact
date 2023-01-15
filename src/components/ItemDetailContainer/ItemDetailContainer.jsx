@@ -1,6 +1,6 @@
 import "./itemDetail.scss";
 import React , {useState, useEffect, useContext} from 'react';
-import { getItemDetail } from "../../services/mockServices";
+import { getItemDetail } from "../../services/firebase";
 import { Link, useParams } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { contextoApp } from "../../storage/contextCart";
@@ -36,7 +36,7 @@ export default function ItemListDetail() {
                 <div className="div_detail">
                     <h3 className="detail_name">{product.nombre}</h3>
                     <img alt={product.nombre} src={product.img} />
-                    <p className="detail_price">{product.precio}</p>
+                    <p className="detail_price">${product.precio}</p>
                     <p className="detail_text">{product.detail}</p>
                     {countInCart === 0 ? <ItemCount onAddToCart = { handleAddToCart }/> : <Link to="/carrito" className="link_carrito">Ir al carrito</Link>}
                 </div>

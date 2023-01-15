@@ -20,6 +20,39 @@
     margin: 50px auto;
     text-align: center;
 }
+.div_precio_total{
+    margin: 50px auto;
+    text-align: center;
+    background-color: white;
+    width: fit-content;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
+
+    .precio_total{
+        color: black;
+        margin: 10px 50px 0px;
+    }
+    .boton_compra{
+        margin: 0px 50px 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 30px;
+        width: 200px;
+        text-align: center;
+        border: none;
+        background-color: rgb(9, 38, 61);
+        color: white;
+        transition: 0.3s;
+        &:hover{
+            background-color: rgb(18, 70, 112);
+            transition: 0.3s;
+        }
+    }
+}
 
 .div_products_2{
     &:hover{
@@ -48,8 +81,8 @@
         color: white;
         transition: 0.3s;
         &:hover{
-            background-color: rgb(18, 70, 112);
-            transition: 0.3s;
+            background-color: rgb(179, 28, 28);
+            transition: 0.2s;
         }
     }
 }

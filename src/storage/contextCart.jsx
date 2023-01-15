@@ -5,9 +5,20 @@ const Provider = contextoApp.Provider;
 
 export default function ContextCartProvider(props) {
     let [ cart, setCart ] = useState([]);
+    let [ newCart, setNewCart] = useState([]);
     
     function cantidadCarrito() {
         return(cart.length)
+    }
+    
+    function removeItem(product) {
+        const itemFiltrado = cart.find((item) => item === product)
+        const index = cart.indexOf(itemFiltrado);
+        newCart = [...cart]
+        if (index>-1) {
+            cart.splice(index,1);
+        }
+        setNewCart(newCart);
     }
 
     function agregarCarrito(item,count) {
@@ -31,6 +42,7 @@ export default function ContextCartProvider(props) {
         cart,
         cantidadCarrito,
         agregarCarrito,
+        removeItem,
     }
 
     return (
