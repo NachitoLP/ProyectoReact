@@ -47,7 +47,7 @@ export async function getItemCategory(catID) {
     return itemsCat;
 }
 
-export async function exportItems() {
+/* export async function exportItems() {
     const productos = [
         {
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVMMXdJOG13rDp9cEzdRkvz9iP0G_6SBMJ_Q&usqp=CAU", 
@@ -469,10 +469,10 @@ export async function exportItems() {
             id: "46",
         },
     ];
-    
+
     for (let item of productos) {
         let collectionRefExp = collection(DB, "products");
         addDoc(collectionRefExp, item)
         .then(respuesta => console.log("hola"))
     };
-}
+} */
