@@ -21,11 +21,10 @@
     text-align: center;
 }
 .div_precio_total{
-    margin: 50px auto;
+    margin: 30px auto 215px;
     text-align: center;
     background-color: white;
     width: fit-content;
-    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,52 +36,72 @@
         margin: 10px 50px 0px;
     }
     .boton_compra{
-        margin: 0px 50px 10px;
+        margin: 0px 20px 10px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         height: 30px;
-        width: 200px;
+        width: 250px;
         text-align: center;
         border: none;
         background-color: rgb(9, 38, 61);
         color: white;
         transition: 0.3s;
         &:hover{
-            background-color: rgb(18, 70, 112);
+            background-color: rgb(18, 112, 31);
             transition: 0.3s;
         }
     }
 }
 
-.div_products_2{
-    &:hover{
-        transform: none !important;
-    }
-    .cantidad_agregado{
-        position:absolute;
-        margin: 0px 0px 245px 145px;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 100px;
-        background-color: rgb(9, 38, 61);
-        color: white;
-    }
-    .eliminar_producto{
-        margin: 10px auto 0px;
-        width: 180px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        height: 30px;
-        text-align: center;
-        border: none;
-        background-color: rgb(9, 38, 61);
-        color: white;
-        transition: 0.3s;
+.div_cards_2{
+    max-width: 1200px;
+    margin: auto;
+    .div_products_2{
         &:hover{
-            background-color: rgb(179, 28, 28);
-            transition: 0.2s;
+            transform: none !important;
         }
+        .cantidad_agregado{
+            position:absolute;
+            margin: 0px 0px 245px 145px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 100px;
+            background-color: rgb(9, 38, 61);
+            color: white;
+        }
+        .eliminar_producto{
+            margin: 10px auto 0px;
+            width: 180px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            height: 30px;
+            text-align: center;
+            border: none;
+            background-color: rgb(9, 38, 61);
+            color: white;
+            transition: 0.3s;
+            &:hover{
+                background-color: rgb(179, 28, 28);
+                transition: 0.2s;
+            }
+        }
+    }
+    
+}
+.boton_vaciar-carrito{
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-color: rgb(9, 38, 61);
+    color: white;
+    transition: 0.3s;
+    &:hover{
+        background-color: rgb(179, 28, 28);
+        transition: 0.2s;
     }
 }

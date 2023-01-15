@@ -1,10 +1,9 @@
 .div_detail_container{
     display: flex;
     width: 500px;
-    height: fit-content;
+    min-height: 600px;
     justify-content: space-around;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto 228px;
     background-color: white;
     border-radius: 7px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
@@ -32,15 +31,20 @@
         .detail_text{
             margin: auto;
             text-align: center;
+            max-width: 450px;
         }
         .link_carrito{
             text-align: center;
-            margin: 10px;
+            margin: 40px 0px 0px;
             display: block;
 
             &:hover{
                 color: red;
             }
+        }
+        .link_volver_inicio{
+            @extend .link_carrito;
+            margin: 10px;
         }
     }
 }

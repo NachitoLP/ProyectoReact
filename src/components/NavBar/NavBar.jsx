@@ -14,7 +14,7 @@ export default function NavBar() {
                 <li><Link to="/">Inicio</Link></li>
                 <li><Link to="/categoria/ropa">Ropa</Link></li>
                 <li><Link to="/categoria/perfumeria">Perfumeria</Link></li>
-                <li><Link to="/contacto">Contacto</Link></li>
+                <li><Link to="/categoria/calzados">Calzados</Link></li>
                 <Link to="/carrito" className="logo_carrito">
                     <CartWidget/>
                 </Link>

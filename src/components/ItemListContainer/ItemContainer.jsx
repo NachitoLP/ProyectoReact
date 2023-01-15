@@ -4,6 +4,7 @@ import Item from "./Item";
 import { useParams } from "react-router-dom";
 import { itemsGeneral, getItemCategory } from "../../services/firebase";
 import Loader from "../Loader/Loader";
+import Footer from "../Footer/Footer";
 
 export default function ItemListGeneral() {
   const [productos, setProductos] = useState([]);
@@ -31,16 +32,19 @@ export default function ItemListGeneral() {
     <div>
       { isLoading? <Loader/>
       :
-      <div className="div_cards">
-        {productos.map((item) => (
-          <Item
-            img = {item.img}
-            nombre = {item.nombre}
-            precio = {item.precio}
-            id = {item.id}
-            descuento = {item.descuento}
-          />
-        ))}
+      <div>
+        <div className="div_cards">
+          {productos.map((item) => (
+            <Item
+              img = {item.img}
+              nombre = {item.nombre}
+              precio = {item.precio}
+              id = {item.id}
+              descuento = {item.descuento}
+            />
+          ))}
+        </div>
+        <Footer/>
       </div>
       }
     </div>

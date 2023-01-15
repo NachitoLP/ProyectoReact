@@ -21,6 +21,8 @@ export default function ContextCartProvider(props) {
         setNewCart(newCart);
     }
 
+
+
     function agregarCarrito(item,count) {
         let itemInCart = cart.findIndex (itemInContext => itemInContext.id === item.id)
         let isItemInCart = itemInCart !== -1;
@@ -38,11 +40,23 @@ export default function ContextCartProvider(props) {
         }
     }
 
+    function vaciarCarrito (cart) {
+        cart.splice(0, cart.length)
+        newCart = [...cart]
+        setNewCart(newCart);
+    }
+
+    let getPrecioTotal = () => {
+        return cart.reduce((prev, act) => prev + act.count * act.precio, 0)
+    }
+
     const value = {
         cart,
         cantidadCarrito,
         agregarCarrito,
         removeItem,
+        vaciarCarrito,
+        getPrecioTotal, 
     }
 
     return (
