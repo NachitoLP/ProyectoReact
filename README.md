@@ -15,7 +15,7 @@
 <br>
 <h2> Un poco sobre Mí </h2>
 <p>Soy Joaquín, y actualmente estoy realizando el curso de FullStack Developer, en CoderHouse. En esta ocasión, estoy cursando el tercer módulo de los 4 que ofrece esta carrera, en donde aprendí a realizar una SPA con React JS.</p>
-<h3>¿Qué es una SPA</h3>
+<h3>¿Qué es una SPA?</h3>
 <p>Las siglas SPA hacen referencia a "Single Page Application", o una aplicación de página única. Es una aplicación web o sitio web que interactúa con el usuario, reescribiendo dinámicamente la página web actual con nuevos datos del servidor web, en lugar del método predeterminado de un navegador web que carga páginas nuevas completas.</p>
 <p>Gracias a las numerosas herramientas y atajos que ofrece React y NPM, se hizo un trabajo denso pero a la vez agradable, con mucha teoría llevada a la práctica en el código y miles de conceptos nuevos, diferentes a lo visto en JavaScript.</p>
 <br>
