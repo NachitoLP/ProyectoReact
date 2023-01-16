@@ -3,7 +3,7 @@ import "./itemcount.scss";
 import { useState } from 'react';
 import Button from "../Button/Button"
 
-export default function ItemCount({ stock, onAddToCart }) {
+export default function ItemCount({ onAddToCart }) {
     const [count, setCount] = useState(1)
 
     function handleAdd() {

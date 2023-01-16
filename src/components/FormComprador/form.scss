@@ -1,0 +1,38 @@
+.div_form_datos{
+    .titulo_input{
+        display: block;
+    }
+    .input{
+        width: 250px;
+        height: 20px;
+        text-align: center;
+        background-color: rgba(16, 44, 75, 0.842);
+        color: white;
+        transition: 0.5s;
+
+        &:focus {
+            transform: scale(1.1, 1.1);
+            transition: 0.5s;
+        }
+    }
+}
+
+.form{
+    display: block;
+    margin: auto;
+    text-align: center;
+    .boton_compra{
+        margin: 15px 20px 10px;
+        height: 30px;
+        width: 280px;
+        text-align: center;
+        border: none;
+        background-color: rgb(9, 38, 61);
+        color: white;
+        transition: 0.3s;
+        &:hover{
+            background-color: rgb(18, 112, 31);
+            transition: 0.3s;
+        }
+    }
+}

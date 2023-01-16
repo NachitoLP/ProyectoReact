@@ -1,22 +1,19 @@
 import React, { useContext } from 'react';
 import "./cartview.scss";
 import { contextoApp } from '../../storage/contextCart';
-import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 import { createCheckout } from '../../services/firebase';
 import swal from 'sweetalert';
 import Footer from '../Footer/Footer';
+import ItemCart from '../ItemCart/ItemCart';
+import Form from '../FormComprador/Form';
 
 export default function CartView() {
-    const { cart, removeItem, vaciarCarrito, getPrecioTotal } = useContext(contextoApp);
+    const { cart, vaciarCarrito, getPrecioTotal } = useContext(contextoApp);
 
-    function handleCheckout() {
+    function handleCheckout(buyerData) {
         const orden = {
-            comprador: {
-                nombre: "Joaquin",
-                email: "jfoaj@gmail.com",
-                telefono: "112341",
-            },
+            comprador: buyerData,
             items: cart,
             total: `$${getPrecioTotal()}`,
             date: new Date(),
@@ -39,29 +36,11 @@ export default function CartView() {
         return (
             <div>
                 <h2 className='titulo_carrito'>Tu carrito</h2>
-                <div className="div_cards div_cards_2">
-                    {cart.map((product) => (
-                    <div className="div_products div_products_2">
-                        <img alt="imagen producto" src={product.img}></img>
-                        {product.count? <p className='cantidad_agregado'>{product.count}</p> : <></>}
-                        <div className="div_nombre">
-                            <h3>{product.nombre}</h3>
-                        </div>
-                        <div className="div_precio">
-                            <p>${product.precio} {product.descuento? <small className="numero_descuento">{product.descuento}</small> : <></>}</p>
-                        </div>
-                        <Button onClick={() => 
-                            {
-                                removeItem(product)
-                            }
-                            } className="eliminar_producto" text="X"/>
-                    </div>
-                ))}
-                </div>
+                <ItemCart/>
                 <div className='div_precio_total'>
                     <h3 className='precio_total'>Precio total: ${getPrecioTotal()}</h3>
                     <button onClick={() => vaciarCarrito(cart)} className="boton_vaciar-carrito">Vaciar carrito</button>
-                    <Button onClick={handleCheckout} className="boton_compra" text="Finalizar Compra"/>
+                    <Form onCheckout={handleCheckout}/>
                 </div>
                 <Footer/>
             </div>

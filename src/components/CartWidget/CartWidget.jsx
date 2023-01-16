@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { contextoApp, cantidadCarrito } from '../../storage/contextCart';
+import { contextoApp } from '../../storage/contextCart';
 
 export default function CartWidget() {
   const contextoCart = useContext(contextoApp);
